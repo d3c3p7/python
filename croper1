@@ -1,0 +1,24 @@
+import re,sys 
+
+fileNo=raw_input("File name:\n")
+textfile=open(fileNo, 'r')
+matches=[]
+report=[]
+
+reg=re.compile ("Regex here")
+
+for line in textfile:
+	matches=reg.findall(line)
+	
+	if matches==[]:
+		pass
+	
+	else:
+		if matches not in report:
+			report.append(matches)
+
+		else:
+			pass
+
+textfile.close()
+print report
